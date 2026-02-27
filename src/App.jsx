@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./App.css";
 
 function App() {
   const apiUrl = import.meta.env.VITE_API_URL;
@@ -7,17 +8,17 @@ function App() {
   const [count, setCount] = useState(0);
 
   return (
-    <div style={{ textAlign: "center", marginTop: "50px" }}>
-      <h1>Experiment 10 - Deployment & DevOps</h1>
+    <div className="container">
+      <h1>🚀 Experiment 10 - Deployment & DevOps</h1>
 
       <h2>Environment Variables</h2>
       <p><strong>API URL:</strong> {apiUrl}</p>
       <p><strong>Mode:</strong> {mode}</p>
 
       <h2>Counter Example</h2>
-      <p>Count: {count}</p>
+      <div className="count">{count}</div>
       <button onClick={() => setCount(count + 1)}>
-        Increase
+        Increase Counter
       </button>
     </div>
   );
